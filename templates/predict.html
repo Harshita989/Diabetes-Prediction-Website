@@ -1,0 +1,95 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <style>
+        body{
+            background-image: url("{% static 'Diabetes_prediction_system\images\predict.jpg'%}");
+            background-repeat: repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: rgb(0, 0, 0);
+        }
+        .main{
+            position: fixed;
+            top: 140px;
+            left: 410px;
+            width: 550px;
+            background-color:#ffffff;
+            border-radius: 10px;
+            align-items: center;
+            padding: 5%;
+        }
+        h1{
+            color: #0086b3;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            background-color: #4dc3ff;
+            border: 2px;
+            color: rgb(33, 24, 24);
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+   <h1 style="text-align: center; font-size: 60px; color: white; margin-bottom: 40px;">Welcome to the Prediction System</h1>
+  
+</form>
+   <div align="center" style="padding: 20px;">
+    
+    <form action="result" class="main">
+        <h1 style="color: rgb(0, 0, 0)">Please enter the following instructions:</h1>
+        <table>
+            <tr>
+                <td align="right" >Pregnancies:</td>
+                <td align="left" ><input type="text" name="n1"></td>
+            </tr>
+            <tr>
+                <td align="right" >Gluscose:</td>
+                <td align="left" ><input type="text" name="n2"></td>
+            </tr>
+            <tr>
+                <td align="right" >Blood Pressure:</td>
+                <td align="left" ><input type="text" name="n3"></td>
+            </tr>
+            <tr>
+                <td align="right" >Skin Thickness:</td>
+                <td align="left" ><input type="text" name="n4"></td>
+            </tr>
+            <tr>
+                <td align="right" >Insulin:</td>
+                <td align="left" ><input type="text" name="n5"></td>
+            </tr>
+            <tr>
+                <td align="right" >BMI:</td>
+                <td align="left" ><input type="text" name="n6"></td>
+            </tr>
+            <tr>
+                <td align="right" >Diabetes Pedigree Function:</td>
+                <td align="left" ><input type="text" name="n7"></td>
+            </tr>
+            <tr>
+                <td align="right" >Age:</td>
+                <td align="left" ><input type="text" name="n8"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit" > <br>
+        <h4>
+            Result:{{result2}}
+        </h4>
+    </form>
+     
+   </div>
+   
+</body>
+</html>
